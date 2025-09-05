@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ta">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIC :: Technical Support Team</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts Tamil -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Noto Serif Tamil", serif;
+        background-color: #f8f9fa;
+      }
+      .navbar {
+        background-color: #8b0000;
+      }
+      .navbar-brand,
+      .nav-link,
+      .dropdown-item {
+        color: #fff !important;
+      }
+      .dropdown-menu {
+        background-color: #8b0000;
+      }
+      .dropdown-item:hover {
+        background-color: #660000;
+        color: #ffd700 !important;
+      }
+      .nav-link:hover {
+        color: #ffd700 !important;
+      }
+      .lang-switch {
+        margin-left: 15px;
+        background: #fff;
+        color: #8b0000;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      .header-section {
+        background-color: #8b0000;
+        color: white;
+        padding: 50px 0;
+        text-align: center;
+      }
+      .team-section {
+        padding: 50px 0;
+      }
+      .team-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .team-card img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 15px;
+        border: 4px solid #8b0000;
+      }
+      footer {
+        background-color: #8b0000;
+        color: white;
+        padding: 20px 0;
+      }
+    </style>
+
+    <style>
+      body {
+        font-family: "Noto Serif Tamil", serif;
+        font-size: small;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+      .navbar {
+        background-color: #8b0000; /* Deep red reflecting Tamil cultural colors */
+      }
+      .navbar-brand,
+      .nav-link {
+        color: #fff !important;
+      }
+      .nav-link:hover {
+        color: #ffd700 !important; /* Gold hover effect for Tamil cultural aesthetic */
+      }
+      .header-section {
+        background-color: #8b0000;
+        color: white;
+        padding: 50px 0;
+        text-align: center;
+      }
+      .content-section {
+        padding: 40px 0;
+      }
+      .product-card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .product-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+      .whatsapp-btn {
+        background-color: #25d366; /* WhatsApp green */
+        color: white;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 15px;
+        border-radius: 5px;
+      }
+      .whatsapp-btn:hover {
+        background-color: #20b858;
+      }
+      .whatsapp-btn img {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+      }
+      .lang-switcher {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+      .lang-switcher a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+      .lang-switcher a:hover {
+        color: #ffd700;
+      }
+      footer {
+        background-color: #8b0000;
+        color: white;
+        padding: 20px 0;
+      }
+      .tamil-text {
+        font-family: "Noto Serif Tamil", serif;
+      }
+      @media (max-width: 768px) {
+        .header-section {
+          padding: 30px 0;
+        }
+        .product-card img {
+          height: 150px;
+        }
+        .whatsapp-btn img {
+          height: 100%;
+          margin-top: 8%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Language Switch Buttons -->
+    <div class="text-end p-2">
+      <button
+        class="btn btn-sm btn-outline-primary"
+        onclick="setLanguage('ta')"
+      >
+        தமிழ்
+      </button>
+      <button
+        class="btn btn-sm btn-outline-secondary"
+        onclick="setLanguage('en')"
+      >
+        English
+      </button>
+    </div>
+
+    <!-- Navigation 1 -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a
+          class="navbar-brand lang"
+          href="index.html"
+          data-ta="Tamil Information Centre"
+          data-en="Tamil Information Centre"
+          >Tamil Information Centre</a
+        >
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav1"
+          aria-controls="navbarNav1"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav1">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link lang"
+                href="index.html"
+                data-ta="முகப்பு"
+                data-en="Home"
+                >முகப்பு</a
+              >
+            </li>
+
+            <!-- ABOUT US -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle lang"
+                href="#"
+                id="aboutDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                data-ta="எங்களைப் பற்றி"
+                data-en="About Us"
+                >எங்களைப் பற்றி</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li>
+                  <a
+                    class="dropdown-item lang"
+                    href="about.html"
+                    data-ta="எங்களைப் பற்றி"
+                    data-en="About Us"
+                    >எங்களைப் பற்றி</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item lang"
+                    href="support.html"
+                    data-ta="ஆதரவு தாருங்கள்"
+                    data-en="Support Us"
+                    >ஆதரவு தாருங்கள்</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item lang"
+                    href="arts.html"
+                    data-ta="கலை & பாரம்பரியம்"
+                    data-en="Arts & Heritage"
+                    >கலை & பாரம்பரியம்</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- NEWS -->
+            <li class="nav-item">
+              <a
+                class="nav-link lang"
+                href="updates.html"
+                data-ta="செய்திகள்"
+                data-en="News"
+                >செய்திகள்</a
+              >
+            </li>
+
+            <!-- ARCHIVE -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle lang"
+                href="#"
+                id="archiveDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                data-ta="ஆவண மையம்"
+                data-en="Archive Centre"
+                >ஆவண மையம்</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="archiveDropdown">
+                <li>
+                  <a
+                    class="dropdown-item lang"
+                    href="archive.html"
+                    data-ta="தொகுப்பு"
+                    data-en="Collections"
+                    >தொகுப்பு</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item lang"
+                    href="identity.html"
+                    data-ta="அடையாளப் பட்டியல்"
+                    data-en="Identity List"
+                    >அடையாளப் பட்டியல்</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- EXHIBITION -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle lang"
+                href="#"
+                id="exhibitionDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                data-ta="காட்சிப்பொறி மற்றும் பாரம்பரிய மையம்"
+                data-en="Exhibition & Heritage Centre"
+              >
+                காட்சிப்பொறி மற்றும் பாரம்பரிய மையம்</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="exhibitionDropdown">
+                <li>
+                  <a
+                    class="dropdown-item lang"
+                    href="exhibition.html"
+                    data-ta="ToL காட்சி"
+                    data-en="ToL Exhibition"
+                    >ToL காட்சி</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item lang"
+                    href="culture.html"
+                    data-ta="பாரம்பரிய மையம்"
+                    data-en="Heritage Centre"
+                    >பாரம்பரிய மையம்</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item lang"
+                    href="thing.html"
+                    data-ta="பொருள் வழிகாட்டிகள்"
+                    data-en="Object Guides"
+                    >பொருள் வழிகாட்டிகள்</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item lang"
+                    href="history.html"
+                    data-ta="வரலாற்று காலவரிசை"
+                    data-en="Historical Timeline"
+                    >வரலாற்று காலவரிசை</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item lang"
+                    href="edu.html"
+                    data-ta="கற்றல் பணிமுறைகள்"
+                    data-en="Learning Workshops"
+                    >கற்றல் பணிமுறைகள்</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- TECH SUPPORT -->
+            <li class="nav-item">
+              <a
+                class="nav-link lang"
+                href="support_team.html"
+                data-ta="தொழில்நுட்ப உதவி"
+                data-en="Technical Support"
+                >தொழில்நுட்ப உதவி</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Navigation 2 -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNav2">
+          <ul class="navbar-nav ms-auto">
+            <!-- WHAT'S ON -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle lang"
+                href="#"
+                id="whatsOnDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                data-ta="நிகழ்ச்சிகள்"
+                data-en="Events"
+                >நிகழ்ச்சிகள்</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="whatsOnDropdown">
+                <li>
+                  <a
+                    class="dropdown-item lang"
+                    href="resent.html"
+                    data-ta="சமீபத்திய நிகழ்வுகள்"
+                    data-en="Recent Events"
+                    >சமீபத்திய நிகழ்வுகள்</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item lang"
+                    href="plan.html"
+                    data-ta="திட்டங்கள் மற்றும் நிகழ்ச்சிகள்"
+                    data-en="Plans & Programs"
+                    >திட்டங்கள் மற்றும் நிகழ்ச்சிகள்</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item lang"
+                    href="help.html"
+                    data-ta="ஒத்துழைப்பு"
+                    data-en="Collaboration"
+                    >ஒத்துழைப்பு</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- JOIN -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle lang"
+                href="#"
+                id="joinDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                data-ta="இணையவும்"
+                data-en="Join"
+                >இணையவும்</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="joinDropdown">
+                <li>
+                  <a
+                    class="dropdown-item lang"
+                    href="join.html"
+                    data-ta="உறுப்பினர் பதிவு"
+                    data-en="Membership"
+                    >உறுப்பினர் பதிவு</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item lang"
+                    href="donate.html"
+                    data-ta="நன்கொடை"
+                    data-en="Donate"
+                    >நன்கொடை</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- SHOP -->
+            <li class="nav-item">
+              <a
+                class="nav-link lang"
+                href="shop.html"
+                data-ta="கடை"
+                data-en="Shop"
+                >கடை</a
+              >
+            </li>
+
+            <!-- CONTACT -->
+            <li class="nav-item">
+              <a
+                class="nav-link lang"
+                href="contact.html"
+                data-ta="தொடர்பு"
+                data-en="Contact"
+                >தொடர்பு</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="header-section">
+      <div class="container">
+        <h1
+          class="lang"
+          data-en="Technical Support Team"
+          data-ta="தொழில்நுட்ப உதவி குழு"
+        >
+          தொழில்நுட்ப உதவி குழு
+        </h1>
+        <p
+          class="lang"
+          data-en="Meet our dedicated team members"
+          data-ta="எங்கள் அர்ப்பணிப்புடன் செயல்படும் குழுவினரை சந்தியுங்கள்"
+        >
+          எங்கள் அர்ப்பணிப்புடன் செயல்படும் குழுவினரை சந்தியுங்கள்
+        </p>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Member 1 -->
+          <div class="col-md-4">
+            <div class="team-card">
+              <img src="images/konilavan.jpg" alt="Member Photo" />
+              <h4
+                class="lang"
+                data-en="Arulchandrean Konilavan"
+                data-ta="Arulchandrean Konilavan"
+              >
+                Arulchandrean Konilavan
+              </h4>
+              <p
+                class="lang"
+                data-en="( Executive incharge TIC )"
+                data-ta="( நிர்வாகப் பொறுப்பாளர் TIC )"
+              >
+                ( Executive incharge TIC )
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="container">
+        <p
+          class="lang"
+          data-en="Tamil Information Centre © 2025, All rights reserved."
+          data-ta="தமிழ் தகவல் மையம் © 2025, அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
+        >
+          தமிழ் தகவல் மையம் © 2025, அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Language Switcher Script -->
+    <script>
+      function switchLang(lang) {
+        document.querySelectorAll(".lang").forEach(function (el) {
+          if (lang === "en") {
+            el.textContent = el.getAttribute("data-en");
+          } else {
+            el.textContent = el.getAttribute("data-ta");
+          }
+        });
+      }
+      // default Tamil
+      switchLang("ta");
+    </script>
+
+    <!-- Language Switch Script -->
+    <script src="./js/language_switch.js"></script>
+  </body>
+</html>
