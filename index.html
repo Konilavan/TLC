@@ -381,7 +381,7 @@
             <li class="nav-item">
               <a
                 class="nav-link lang"
-                href="support_team.html"
+                href="#team-card"
                 data-ta="தொழில்நுட்ப உதவி"
                 data-en="Technical Support"
                 >தொழில்நுட்ப உதவி</a
@@ -690,49 +690,99 @@
       <div id="loader" style="display: none">Loading...</div>
     </section>
 
-    <!-- Events Calendar -->
-    <section class="container my-5">
+    <!-- Combined Section -->
+<section class="container my-5" id="team-card">
+  <div class="row g-4">
+    
+    <!-- Events Calendar Column -->
+    <div class="col-md-6 col-12">
       <h2 class="text-center tamil-text">நிகழ்வுகள்</h2>
       <h3 class="text-center">Upcoming Events</h3>
-      <div class="row">
-        <div class="col-md-6 mx-auto">
-          <div class="card event-card">
-            <div class="card-body text-center">
-              <h5>Select dates to view past and future events</h5>
-              <div class="calendar-placeholder">
-                <p>Calendar: August 2025</p>
-                <!-- Simplified calendar placeholder -->
-                <link
-                  rel="stylesheet"
-                  href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
-                />
-                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-                <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+      <div class="card event-card">
+        <div class="card-body text-center">
+          <h5>Select dates to view past and future events</h5>
+          <div class="calendar-placeholder">
+            <p>Calendar: August 2025</p>
+            <!-- Simplified calendar placeholder -->
+            <link
+              rel="stylesheet"
+              href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+            />
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
-                <div
-                  style="
-                    display: flex;
-                    justify-content: center;
-                    margin-top: 50px;
-                  "
-                >
-                  <div id="datepicker"></div>
-                </div>
-
-                <script>
-                  $(function () {
-                    $("#datepicker").datepicker({
-                      showOtherMonths: true,
-                      selectOtherMonths: true,
-                    });
-                  });
-                </script>
-              </div>
+            <div style="display: flex; justify-content: center; margin-top: 30px;">
+              <div id="datepicker"></div>
             </div>
+
+            <script>
+              $(function () {
+                $("#datepicker").datepicker({
+                  showOtherMonths: true,
+                  selectOtherMonths: true,
+                });
+              });
+            </script>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+
+    <!-- Team Section Column -->
+    <div class="col-md-6 col-12">
+      <h2 class="text-center tamil-text">எங்கள் குழு உறுப்பினர்</h2>
+      <h3 class="text-center">Our Team member</h3>
+      <div class="team-section">
+        <div class="team-card">
+          <img src="images/konilavan.jpg" alt="Member Photo" />
+          <h4
+            class="lang"
+            data-en="Arulchandrean Konilavan"
+            data-ta="Arulchandrean Konilavan"
+          >
+            Arulchandrean Konilavan
+          </h4>
+          <p
+            class="lang"
+            data-en="( Executive incharge TIC )"
+            data-ta="( நிர்வாகப் பொறுப்பாளர் TIC )"
+          >
+            ( Executive incharge TIC )
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .team-section {
+    text-align: center;
+  }
+  .team-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 56vh;
+  }
+  .team-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 4px solid #8b0000;
+  }
+  @media (max-width: 480px) {
+    .team-card {
+      height: auto; /* adjust height naturally for small screens */
+    }
+  }
+</style>
+
 
     <!-- Donation Call-to-Action -->
     <section class="container my-5">
@@ -1263,7 +1313,6 @@
       // Initial load
       renderUpdates(currentPage);
     </script>
-
     <script src="./js/protect.js"></script>
   </body>
 </html>
